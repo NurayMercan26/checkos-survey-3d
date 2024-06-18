@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Tanıtımı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Ürün Tanıtımı</h1>
+            <p class="header-subtitle">3D Ürün Görünümü ve Detayları</p>
+        </div>
+    </header>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="pexels-coffee-bean-142635-430546.jpg" alt="Ürün 1" class="product-image" data-name="Ürün 1" data-price="100">
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="pexels-linkedin-1251844.jpg" alt="Ürün 2" class="product-image" data-name="Ürün 2" data-price="150">
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="pexels-picjumbo-com-55570-196649.jpg" alt="Ürün 3" class="product-image" data-name="Ürün 3" data-price="200">
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="cart">
+            <h2>Sepetim</h2>
+            <ul class="cart-items"></ul>
+            <p>Toplam: <span class="total-price">0</span> TL</p>
+            <button class="checkout">Ödeme Yap</button>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ürün Detayları</h2>
+            <p>Bu ürün hakkında detaylı bilgi...</p>
+        </div>
+    </div>
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-payment">&times;</span>
+            <h2>Ödeme</h2>
+            <form id="payment-form">
+                <label for="card-number">Kart Numarası:</label>
+                <input type="text" id="card-number" name="card-number" required><br>
+                <label for="expiry-date">Son Kullanma Tarihi:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required><br>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required><br>
+                <button type="submit">Ödemeyi Tamamla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+    <script src="Express.js"></script>
+    <script src="Node.js"></script>
+</body>
+</html>
+
